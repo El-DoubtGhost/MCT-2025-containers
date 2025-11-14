@@ -42,7 +42,7 @@ jobs:
 
       - name: Test Initialization script
         run: |
-          exit_code=$(docker inspect my_container --format='{{.State.ExitCode}}')
+          exit_code=$(docker inspect init_app --format='{{.State.ExitCode}}')
           if [ "$exit_code" != "0" ]; then
             echo "Container exited with code $exit_code"
             exit 1
