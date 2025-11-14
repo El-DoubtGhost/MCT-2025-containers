@@ -4,7 +4,6 @@ import psycopg2
 
 app = FastAPI()
 
-message = {"output":'pong'}
 visits_count = 0
 
 DB_NAME = os.getenv("DB_NAME", "request_db")
@@ -40,7 +39,7 @@ async def ping_pong(request: Request):
     cur.close()
     conn.close()
     
-    return message["output"]
+    return 'pong'
 
 @app.get("/visits")
 async def visits_request():
