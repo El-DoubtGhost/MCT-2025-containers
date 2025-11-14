@@ -4,7 +4,7 @@ import psycopg2
 
 app = FastAPI()
 
-message = {"output":"pong"}
+message = {"output":'pong'}
 visits_count = 0
 
 DB_NAME = os.getenv("DB_NAME", "request_db")
